@@ -3,11 +3,11 @@ require_relative "../custom_download_strategy"
 class Tb < Formula
   desc "a CLI for running TouchBistro services on a development machine"
   homepage ""
-  version "0.0.11"
+  version "0.0.12"
 
   if OS.mac?
-    url "https://github.com/TouchBistro/tb/releases/download/v0.0.11/tb_0.0.11_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "12ef54959e76524b0b0b031077fed292f092d7a8e3c240db97b4701759326003"
+    url "https://github.com/TouchBistro/tb/releases/download/v0.0.12/tb_0.0.12_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "c8346d38fd87616aeb930047859dbd4be30894ea4e1296656f5f423d92b830a0"
   elsif OS.linux?
   end
 
@@ -16,7 +16,12 @@ class Tb < Formula
     bash_completion.install "dist/tb.bash"
     zsh_completion.install "dist/_tb"
     man1.install Dir["dist/man1/*.1"]
-    system "make rm-files"
+  end
+
+  def caveats; <<~EOS
+    📣🚨 Please run the following command to remove cached config files after upgrading: 🚨📣
+      tb nuke --config
+  EOS
   end
 
   test do
