@@ -3,12 +3,12 @@ require_relative "../custom_download_strategy"
 class Tb < Formula
   desc "a CLI for running TouchBistro services on a development machine"
   homepage ""
-  version "1.15.0"
+  version "1.15.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TouchBistro/tb/releases/download/1.15.0/tb_1.15.0_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "a4c86681244dc3c602b10162434a4ae474775f50f03fe7c6e03c299a74e5b849"
+    url "https://github.com/TouchBistro/tb/releases/download/1.15.1/tb_1.15.1_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "ffab3deb154d2edfc643af5c0191e2966a1bbdc1d53e8621af57f21527963792"
   elsif OS.linux?
   end
 
