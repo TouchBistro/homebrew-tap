@@ -2,15 +2,15 @@
 class Tb < Formula
   desc "a CLI for running services on a development machine"
   homepage ""
-  version "3.0.3"
+  version "3.0.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/TouchBistro/tb/releases/download/3.0.3/tb_3.0.3_Darwin_x86_64.tar.gz"
-    sha256 "c8354fbdb3842650ec336b1dc916f7495c0f25700416b6705c46570a0efac8ac"
+    url "https://github.com/TouchBistro/tb/releases/download/3.0.4/tb_3.0.4_Darwin_x86_64.tar.gz"
+    sha256 "6aabf48879927dfab79d1ef1203ab2f44cb8e70969494d6ee86aff4b7ae206f0"
   elsif OS.linux?
-    url "https://github.com/TouchBistro/tb/releases/download/3.0.3/tb_3.0.3_Linux_x86_64.tar.gz"
-    sha256 "f41fddb78cf62883ad2e37d1168e061d0ecb73e9d1dd64dc7ff18f06b6950ade"
+    url "https://github.com/TouchBistro/tb/releases/download/3.0.4/tb_3.0.4_Linux_x86_64.tar.gz"
+    sha256 "9c8ac71a3d0c5525a451c70f110d70b3a7ff741ec8cf9da3fe652c4e735f528a"
   end
 
   def install
