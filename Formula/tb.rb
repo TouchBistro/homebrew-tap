@@ -5,28 +5,28 @@
 class Tb < Formula
   desc "a CLI for running services on a development machine"
   homepage ""
-  version "3.5.0"
+  version "3.5.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.5.0/tb_3.5.0_Darwin_x86_64.tar.gz"
-      sha256 "0a21b6e414deecfc19f9073317db87b28f2dafd568ef5f2168ebd1e43da5c1d8"
+      url "https://github.com/TouchBistro/tb/releases/download/3.5.1/tb_3.5.1_Darwin_x86_64.tar.gz"
+      sha256 "8d5b6b239ce4ddd04355356d085fd2060d91c97e67dd0d5da3b10f8a4ff18f01"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TouchBistro/tb/releases/download/3.5.0/tb_3.5.0_Darwin_arm64.tar.gz"
-      sha256 "62b9bb529052fc16eb53cbcad2ca74f60aa0666a055d61cafea40697e8711e47"
+      url "https://github.com/TouchBistro/tb/releases/download/3.5.1/tb_3.5.1_Darwin_arm64.tar.gz"
+      sha256 "b7fed311d60e9cc0ab12d2bfff309f6666f2bb1828d83085717730bd8aacd67a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.5.0/tb_3.5.0_Linux_x86_64.tar.gz"
-      sha256 "6e39ecd6cfa11884f8a23e01a6062399313bbdb752030ca40f3ecc05805bb105"
+      url "https://github.com/TouchBistro/tb/releases/download/3.5.1/tb_3.5.1_Linux_x86_64.tar.gz"
+      sha256 "689a7099cea901ba075fa1f72287a608701cacb5accff9958163371233bcfabe"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TouchBistro/tb/releases/download/3.5.0/tb_3.5.0_Linux_arm64.tar.gz"
-      sha256 "b131d99dadd39a8837bc9a08ea7b3b75b681c896f1331836914d35cc63780de4"
+      url "https://github.com/TouchBistro/tb/releases/download/3.5.1/tb_3.5.1_Linux_arm64.tar.gz"
+      sha256 "157fd583d67e49d4eaf867fb4faefb63cdf47fcdc23f9bcfc303eec0ab5ef53f"
     end
   end
 
@@ -34,7 +34,7 @@ class Tb < Formula
     bin.install "tb"
     bash_completion.install "artifacts/tb.bash"
     zsh_completion.install "artifacts/_tb"
-    man1.install Dir["dist/man1/*.1"]
+    man1.install Dir["artifacts/man1/*.1"]
   end
 
   test do
