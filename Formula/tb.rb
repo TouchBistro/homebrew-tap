@@ -5,28 +5,28 @@
 class Tb < Formula
   desc "a CLI for running services on a development machine"
   homepage ""
-  version "3.5.1"
+  version "3.5.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.5.1/tb_3.5.1_Darwin_x86_64.tar.gz"
-      sha256 "8d5b6b239ce4ddd04355356d085fd2060d91c97e67dd0d5da3b10f8a4ff18f01"
+      url "https://github.com/TouchBistro/tb/releases/download/3.5.2/tb_3.5.2_Darwin_x86_64.tar.gz"
+      sha256 "8456fa204dc28ebd3ea2ce8bf622c55346e701260a82837bc61ed7806c43fb8c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TouchBistro/tb/releases/download/3.5.1/tb_3.5.1_Darwin_arm64.tar.gz"
-      sha256 "b7fed311d60e9cc0ab12d2bfff309f6666f2bb1828d83085717730bd8aacd67a"
+      url "https://github.com/TouchBistro/tb/releases/download/3.5.2/tb_3.5.2_Darwin_arm64.tar.gz"
+      sha256 "785751a4f8b5277aec9e5a36de6240ef6a6db39d0f312041a4392bd4dc0da6d3"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.5.1/tb_3.5.1_Linux_x86_64.tar.gz"
-      sha256 "689a7099cea901ba075fa1f72287a608701cacb5accff9958163371233bcfabe"
+      url "https://github.com/TouchBistro/tb/releases/download/3.5.2/tb_3.5.2_Linux_x86_64.tar.gz"
+      sha256 "70dbf917569de57b701f6ec80c292e01c7a143f10d99e7cfbe915eebf4f642ce"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TouchBistro/tb/releases/download/3.5.1/tb_3.5.1_Linux_arm64.tar.gz"
-      sha256 "157fd583d67e49d4eaf867fb4faefb63cdf47fcdc23f9bcfc303eec0ab5ef53f"
+      url "https://github.com/TouchBistro/tb/releases/download/3.5.2/tb_3.5.2_Linux_arm64.tar.gz"
+      sha256 "f3fd6e1afaa7213f1afa9725d936a849db13c722380921e112cb22044ad455d9"
     end
   end
 
