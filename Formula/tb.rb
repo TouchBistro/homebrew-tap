@@ -5,12 +5,12 @@
 class Tb < Formula
   desc "a CLI for running services on a development machine"
   homepage ""
-  version "3.6.0"
+  version "3.6.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/TouchBistro/tb/releases/download/3.6.0/tb_3.6.0_Darwin_arm64.tar.gz"
-      sha256 "0e45c392f03891fe5dccb3ffee2efcaefc2c327a88ec05253a958463d9842b83"
+    if Hardware::CPU.intel?
+      url "https://github.com/TouchBistro/tb/releases/download/3.6.1/tb_3.6.1_Darwin_x86_64.tar.gz"
+      sha256 "b01d9ba94e6b86ee4575ad3087abb4878a09c172de6a9fae1c91fd0897441d83"
 
       def install
         bin.install "tb"
@@ -18,9 +18,9 @@ class Tb < Formula
         zsh_completion.install "artifacts/_tb"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.6.0/tb_3.6.0_Darwin_x86_64.tar.gz"
-      sha256 "aeb3700aade33276c5f29aaf4829ee0c46efbcf79eef9fd968fbc913ac837235"
+    if Hardware::CPU.arm?
+      url "https://github.com/TouchBistro/tb/releases/download/3.6.1/tb_3.6.1_Darwin_arm64.tar.gz"
+      sha256 "426baafcfe0a64b857817b6354ab7f6c2a61f1e08fb8e44bc18966556465c391"
 
       def install
         bin.install "tb"
@@ -32,8 +32,8 @@ class Tb < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TouchBistro/tb/releases/download/3.6.0/tb_3.6.0_Linux_arm64.tar.gz"
-      sha256 "0b192b5cea4c71dc5a199d1382658ddb62ca07d48e383f603f9bcd8b327d0ac0"
+      url "https://github.com/TouchBistro/tb/releases/download/3.6.1/tb_3.6.1_Linux_arm64.tar.gz"
+      sha256 "7f52ebfb7725abd2f9b7e77750f5e613ecb26fa3fb3678fb835fad095e1796de"
 
       def install
         bin.install "tb"
@@ -42,8 +42,8 @@ class Tb < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.6.0/tb_3.6.0_Linux_x86_64.tar.gz"
-      sha256 "7f89b0326a6bcb90a8afb17c68aa92c5a86b3e85b2c98969662713a4a333e71d"
+      url "https://github.com/TouchBistro/tb/releases/download/3.6.1/tb_3.6.1_Linux_x86_64.tar.gz"
+      sha256 "d5d2c54c808286931814bfb30ec0e6ff7d936dfed97efabd45bba552ed45fc66"
 
       def install
         bin.install "tb"
