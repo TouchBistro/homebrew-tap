@@ -5,12 +5,12 @@
 class Tb < Formula
   desc "a CLI for running services on a development machine"
   homepage ""
-  version "3.8.4"
+  version "3.8.9"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.8.4/tb_3.8.4_Darwin_x86_64.tar.gz"
-      sha256 "735a859c49e00315d376ed8bbe89e816f812a17140f17772bae94a8b9ffaf1ea"
+    if Hardware::CPU.arm?
+      url "https://github.com/TouchBistro/tb/releases/download/3.8.9/tb_Darwin_arm64.tar.gz"
+      sha256 "68c41b727dc0f31aa15e7a3bb58b6122027261f748a4323fd8bcabd2d368c989"
 
       def install
         bin.install "tb"
@@ -18,9 +18,9 @@ class Tb < Formula
         zsh_completion.install "artifacts/_tb"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/TouchBistro/tb/releases/download/3.8.4/tb_3.8.4_Darwin_arm64.tar.gz"
-      sha256 "28e539b2731e650f045debde4227393486b80670b286aabaad38f67d5829c12d"
+    if Hardware::CPU.intel?
+      url "https://github.com/TouchBistro/tb/releases/download/3.8.9/tb_Darwin_x86_64.tar.gz"
+      sha256 "b830b30a9cb41b7a5846a8e5bf93ef2581d9528fc264b803d048d39e8897e2bb"
 
       def install
         bin.install "tb"
@@ -31,9 +31,9 @@ class Tb < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TouchBistro/tb/releases/download/3.8.4/tb_3.8.4_Linux_arm64.tar.gz"
-      sha256 "85c4472849a63a6b691f5f86b1e456c3f1c48bfde7538f2b5fada0427da8d784"
+    if Hardware::CPU.intel?
+      url "https://github.com/TouchBistro/tb/releases/download/3.8.9/tb_Linux_x86_64.tar.gz"
+      sha256 "b747626abc0345c0f041a08dc7ea35a3c7419a9f714f6b3600ced04f4eacfccf"
 
       def install
         bin.install "tb"
@@ -41,9 +41,9 @@ class Tb < Formula
         zsh_completion.install "artifacts/_tb"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.8.4/tb_3.8.4_Linux_x86_64.tar.gz"
-      sha256 "f5d41804501c7665e04a682158ccbd0d19563765c09dddadff18564958feb530"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/TouchBistro/tb/releases/download/3.8.9/tb_Linux_arm64.tar.gz"
+      sha256 "0e3e82e4a9c4e63b38febb459ea4123fb27232fe00248e18d9cba2f3ba40e3be"
 
       def install
         bin.install "tb"
