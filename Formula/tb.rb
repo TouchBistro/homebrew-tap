@@ -5,12 +5,12 @@
 class Tb < Formula
   desc "a CLI for running services on a development machine"
   homepage ""
-  version "3.8.9"
+  version "3.8.10"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/TouchBistro/tb/releases/download/3.8.9/tb_Darwin_arm64.tar.gz"
-      sha256 "68c41b727dc0f31aa15e7a3bb58b6122027261f748a4323fd8bcabd2d368c989"
+    if Hardware::CPU.intel?
+      url "https://github.com/TouchBistro/tb/releases/download/3.8.10/tb_Darwin_x86_64.tar.gz"
+      sha256 "5ca43afacbf4f32c85b52ecb003145e4bc97d376a422957b54661891a8955343"
 
       def install
         bin.install "tb"
@@ -18,9 +18,9 @@ class Tb < Formula
         zsh_completion.install "artifacts/_tb"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.8.9/tb_Darwin_x86_64.tar.gz"
-      sha256 "b830b30a9cb41b7a5846a8e5bf93ef2581d9528fc264b803d048d39e8897e2bb"
+    if Hardware::CPU.arm?
+      url "https://github.com/TouchBistro/tb/releases/download/3.8.10/tb_Darwin_arm64.tar.gz"
+      sha256 "f93e8c41b95381556673d3f730ce9201440b312c784355b140c85f1f908fb08b"
 
       def install
         bin.install "tb"
@@ -32,8 +32,8 @@ class Tb < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.8.9/tb_Linux_x86_64.tar.gz"
-      sha256 "b747626abc0345c0f041a08dc7ea35a3c7419a9f714f6b3600ced04f4eacfccf"
+      url "https://github.com/TouchBistro/tb/releases/download/3.8.10/tb_Linux_x86_64.tar.gz"
+      sha256 "3788d56ae4ed22e0cc09dd2efc57be9c24130b7aae12e358bb719a600adf339e"
 
       def install
         bin.install "tb"
@@ -42,8 +42,8 @@ class Tb < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TouchBistro/tb/releases/download/3.8.9/tb_Linux_arm64.tar.gz"
-      sha256 "0e3e82e4a9c4e63b38febb459ea4123fb27232fe00248e18d9cba2f3ba40e3be"
+      url "https://github.com/TouchBistro/tb/releases/download/3.8.10/tb_Linux_arm64.tar.gz"
+      sha256 "50e85401002a7b4cc2715bd34cec455f60720d38b5fa73c32982701a665d9ea8"
 
       def install
         bin.install "tb"
