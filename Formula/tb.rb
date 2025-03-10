@@ -5,12 +5,12 @@
 class Tb < Formula
   desc "a CLI for running services on a development machine"
   homepage ""
-  version "3.16.5"
+  version "3.17.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.16.5/tb_Darwin_x86_64.tar.gz"
-      sha256 "dc5a46c2175cb9c4b75de1747f7e8ca112500622bd457b650536fe6f324f5fc5"
+      url "https://github.com/TouchBistro/tb/releases/download/3.17.0/tb_Darwin_x86_64.tar.gz"
+      sha256 "5c6631a632021227a88efeec1696e21b2d640ad7f371e52eb0fbc33086a3bddd"
 
       def install
         bin.install "tb"
@@ -19,8 +19,8 @@ class Tb < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/TouchBistro/tb/releases/download/3.16.5/tb_Darwin_arm64.tar.gz"
-      sha256 "adc70f09eb412d30d851fe9ad74891de7dda2cccb30f21a12f2204811fcabb7f"
+      url "https://github.com/TouchBistro/tb/releases/download/3.17.0/tb_Darwin_arm64.tar.gz"
+      sha256 "ed5a410a49defc781f5081e3201113c40e7066ba2b7c1b189d9504e2f98bfaf5"
 
       def install
         bin.install "tb"
@@ -32,8 +32,8 @@ class Tb < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TouchBistro/tb/releases/download/3.16.5/tb_Linux_arm64.tar.gz"
-      sha256 "abae006c66f249e36c6691784793cc572ca6966ddf3ac8debfcf43d6a02cde3a"
+      url "https://github.com/TouchBistro/tb/releases/download/3.17.0/tb_Linux_arm64.tar.gz"
+      sha256 "a064d0da5cfafe33b240b2cc998cf470ea12e390d38d0ebddce09ae99236fa98"
 
       def install
         bin.install "tb"
@@ -42,8 +42,8 @@ class Tb < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.16.5/tb_Linux_x86_64.tar.gz"
-      sha256 "acd23e6d1208ccfed623a4231c3994d35b9eedf35ac882d94710e162143b85c7"
+      url "https://github.com/TouchBistro/tb/releases/download/3.17.0/tb_Linux_x86_64.tar.gz"
+      sha256 "efe0f2f7dd32819ddbb90f858223b674edb979c121590d3e359c7016e5ef0051"
 
       def install
         bin.install "tb"
