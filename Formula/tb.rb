@@ -5,12 +5,12 @@
 class Tb < Formula
   desc "a CLI for running services on a development machine"
   homepage ""
-  version "3.17.2"
+  version "3.19.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.17.2/tb_Darwin_x86_64.tar.gz"
-      sha256 "1191f49989a68ff82007f70f5c97053b3e492649b9897081e4ced2bf44c9e5c9"
+    if Hardware::CPU.arm?
+      url "https://github.com/TouchBistro/tb/releases/download/3.19.0/tb_Darwin_arm64.tar.gz"
+      sha256 "18d7c268305d1100a218bc09bd9ad9a0c891a44fd6ca34e3e7358caf36e0b515"
 
       def install
         bin.install "tb"
@@ -18,9 +18,9 @@ class Tb < Formula
         zsh_completion.install "artifacts/_tb"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/TouchBistro/tb/releases/download/3.17.2/tb_Darwin_arm64.tar.gz"
-      sha256 "07da9b29538361b81b4ac2455ba71e91ab5a6cee9521c9fb3101c734cb83c590"
+    if Hardware::CPU.intel?
+      url "https://github.com/TouchBistro/tb/releases/download/3.19.0/tb_Darwin_x86_64.tar.gz"
+      sha256 "16bf73c1f3dd4f11f0aa011c75b92ac8d3b482f1e8ecbab1eaaa5a077ee407c8"
 
       def install
         bin.install "tb"
@@ -32,8 +32,8 @@ class Tb < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/TouchBistro/tb/releases/download/3.17.2/tb_Linux_arm64.tar.gz"
-      sha256 "8d158e253af534bd8c3307a07aa8089e28b42baf4c6db7f81013133996fcad71"
+      url "https://github.com/TouchBistro/tb/releases/download/3.19.0/tb_Linux_arm64.tar.gz"
+      sha256 "90157f4e06b05ed6b6620d725fc9624747cfbcf2c96eaae71d4ed7f381d8243a"
 
       def install
         bin.install "tb"
@@ -42,8 +42,8 @@ class Tb < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TouchBistro/tb/releases/download/3.17.2/tb_Linux_x86_64.tar.gz"
-      sha256 "d3287ddabbe4308bd3fdaf9273d4c90d38d59e8f9afe4fe3a47dd1fc36bd0a37"
+      url "https://github.com/TouchBistro/tb/releases/download/3.19.0/tb_Linux_x86_64.tar.gz"
+      sha256 "3e6fe520859c9f31b1396a86b0a9cef2c9b20af8bacff895cdc0bb6dcd48c049"
 
       def install
         bin.install "tb"
